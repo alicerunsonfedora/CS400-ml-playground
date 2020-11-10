@@ -12,7 +12,7 @@
 #
 
 from sys import argv
-from json import dumps
+from csv import DictWriter
 from argparse import ArgumentParser
 from random import randint
 
@@ -60,7 +60,13 @@ def arguments() -> ArgumentParser:
         usage="generate_random [-h] [--amount [AMOUNT]]",
         description="Generate random abstract states for Yellow Converse."
     )
-    parser.add_argument("--amount", nargs='?', default=50, help="The number of states to make.")
+    parser.add_argument(
+        "--amount",
+        nargs='?',
+        default=50,
+        type=int,
+        help="The number of states to make."
+    )
     return parser
 
 def make_state() -> dict:
@@ -78,5 +84,8 @@ if __name__ == "__main__":
     for _ in range(OPTS.amount):
         states.append(make_state())
 
-    with open("random.json", "w+") as data:
-        data.write(dumps(states, indent=4))
+    with open("random.csv", "w+") as data:
+        csv_header = ATTRIBUTES + ["action"]
+        csv_author = DictWriter(data, csv_header)
+        csv_author.writeheader()
+        csv_author.writerows(states)
