@@ -1,8 +1,8 @@
-<img src="yc.png" align="right"/>
+<img src="tc.png" align="right"/>
 
 # CostumemasterML
 
-**CostumemasterML (Codename Yellow Converse)** is an artificial intelligence agent strategy for the game [_The Costumemaster_][game], a puzzle game about costume-switching. CostumemasterML uses a machine learning decision tree model trained with CoreML to generate its next best actions based on state assessments.
+**CostumemasterML (Codename Teal Converse)** is an artificial intelligence agent strategy for the game [_The Costumemaster_][game], a puzzle game about costume-switching. CostumemasterML uses a machine learning decision tree model trained with CoreML to generate its next best actions based on state assessments.
 
 This repository contains the materials needed to generate a model using Create ML that can be imported into the source code for The Costumemaster (or in the app's resources).
 
@@ -42,7 +42,7 @@ The decision tree agents break up the game world into a series of questions, whi
 - Xcode 12 or greater
 
 ### Getting started
-To get started, clone the repository and open the YellowConverse.mlproj file in Create ML. Some model sources are provided already that can be exported into the main game.
+To get started, clone the repository and open the TealConverse.mlproj file in Create ML. Some model sources are provided already that can be exported into the main game.
 
 ### Creating a model source
 Create a new model source by clicking the plus icon next to "Model Sources". In the Settings tab, click on "Choose" in the training data section to provide a CSV file that represents the training state data to use. The training data file should have the exact same names as the state assessments in the main game.
@@ -63,7 +63,7 @@ By default, the model source will take a chunk of the training data and use that
 ### Train and export the model
 When you're ready to train the model, click "Train" in the toolbar. You can then go to the Output tab and click "Get" to save the file to the disk. This model file can be imported into Xcode by dragging the file into the **Conscious/Assets/Models** group in the navigator.
 
-> :warning: Make sure that the exported file name is `YellowConverse.mlmodel` before importing into Xcode. Naming it differently will require source code changes to the `AIYellowConverseStrategist` in the main game.
+> :warning: Make sure that the exported file name is `TealConverse.mlmodel` before importing into Xcode. Naming it differently will require source code changes to the `AITealConverseStrategist` in the main game.
 
 ### Creating random data
 

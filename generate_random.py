@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #
 # generate_random.py
-# Yellow Converse
+# Teal Converse
 #
 # Created by Marquis Kurt on 11/10/20.
 # Copyright © 2020 Marquis Kurt. All rights reserved.
