@@ -58,7 +58,7 @@ def arguments() -> ArgumentParser:
     parser = ArgumentParser(
         "Random State Generator",
         usage="generate_random [-h] [--amount [AMOUNT]]",
-        description="Generate random abstract states for Yellow Converse."
+        description="Generate random abstract states for Teal Converse."
     )
     parser.add_argument(
         "--amount",

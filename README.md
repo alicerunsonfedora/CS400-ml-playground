@@ -17,6 +17,7 @@ This repository contains the materials needed to generate a model using Create M
     - [Provide testing data](#Provide-testing-data)
   - [Train and export the model](#Train-and-export-the-model)
     - [Creating random data](#Creating-random-data)
+    - [Stitching existing data](#Stiching-existing-data)
 - [Caveats](#Caveats)
 
 ## Why separate this and use CoreML?
@@ -70,6 +71,17 @@ When you're ready to train the model, click "Train" in the toolbar. You can then
 To create a CSV file with random state data, a Python script `generate_random.py` is provided with the repository.
 
 In a terminal, run `generate_random.py`. You can supply an additional argument, `--amount`, and specify how many entries you want in the data set. By default, the script will generate a file with 50 entries.
+
+### Stitching existing data
+
+If you already have files that contain data split over multiple CSV files, a Python script `stitch_csv.py` can be used to stitch them together into a single file.
+
+In a terminal, run `stitch_csv.py` and supply the path containing the CSV files in question with the argument `--path`. Ensure the CSV files have the correct headers and that each rows contains the correct amount of data.
+
+For example:
+```
+./stitch_csv.py --path ./path/to/level/csv_files/from/Game/
+```
 
 ## Caveats
 
